@@ -10,9 +10,16 @@ export default function App() {
   return (
     <>
       {selectedContactId ? (
-        <div>Selected Contact View</div>
+        <div id = "selectedContact">
+        <SelectedContact selectedContactId={selectedContactId} />
+        </div>
+
       ) : (
-        <ContactList />
+
+        <div id="contactList">
+        <ContactList setSelectedContactId={setSelectedContactId} />
+        </div>
+        
       )}
     </>
   );
